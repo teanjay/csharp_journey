@@ -1,0 +1,16 @@
+C:\Users\tnj\source\repos\2.Discriminant\2.Discriminant\bin\Debug\net5.0\2.Discriminant.exe
+C:\Users\tnj\source\repos\2.Discriminant\2.Discriminant\bin\Debug\net5.0\2.Discriminant.deps.json
+C:\Users\tnj\source\repos\2.Discriminant\2.Discriminant\bin\Debug\net5.0\2.Discriminant.runtimeconfig.json
+C:\Users\tnj\source\repos\2.Discriminant\2.Discriminant\bin\Debug\net5.0\2.Discriminant.runtimeconfig.dev.json
+C:\Users\tnj\source\repos\2.Discriminant\2.Discriminant\bin\Debug\net5.0\2.Discriminant.dll
+C:\Users\tnj\source\repos\2.Discriminant\2.Discriminant\bin\Debug\net5.0\ref\2.Discriminant.dll
+C:\Users\tnj\source\repos\2.Discriminant\2.Discriminant\bin\Debug\net5.0\2.Discriminant.pdb
+C:\Users\tnj\source\repos\2.Discriminant\2.Discriminant\obj\Debug\net5.0\2.Discriminant.csproj.AssemblyReference.cache
+C:\Users\tnj\source\repos\2.Discriminant\2.Discriminant\obj\Debug\net5.0\2.Discriminant.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tnj\source\repos\2.Discriminant\2.Discriminant\obj\Debug\net5.0\2.Discriminant.AssemblyInfoInputs.cache
+C:\Users\tnj\source\repos\2.Discriminant\2.Discriminant\obj\Debug\net5.0\2.Discriminant.AssemblyInfo.cs
+C:\Users\tnj\source\repos\2.Discriminant\2.Discriminant\obj\Debug\net5.0\2.Discriminant.csproj.CoreCompileInputs.cache
+C:\Users\tnj\source\repos\2.Discriminant\2.Discriminant\obj\Debug\net5.0\2.Discriminant.dll
+C:\Users\tnj\source\repos\2.Discriminant\2.Discriminant\obj\Debug\net5.0\ref\2.Discriminant.dll
+C:\Users\tnj\source\repos\2.Discriminant\2.Discriminant\obj\Debug\net5.0\2.Discriminant.pdb
+C:\Users\tnj\source\repos\2.Discriminant\2.Discriminant\obj\Debug\net5.0\2.Discriminant.genruntimeconfig.cache
