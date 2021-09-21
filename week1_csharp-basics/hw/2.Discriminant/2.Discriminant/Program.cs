@@ -6,6 +6,7 @@ namespace _2.Discriminant
     {
         static void Main(string[] args)
         {
+            // здесь комментарий для развлечения с мердж конфликтами
             string string1 = "asd";
             int a, b, c;
             bool test = false;
@@ -48,6 +49,8 @@ namespace _2.Discriminant
                         Console.WriteLine("Please, enter a number");
                     }
                 }
+                
+                Console.WriteLine("вот это прикол")
                 Console.WriteLine("OK, c = " + string1);
                 c = int.Parse(string1);
                 var dis = Math.Pow(b, 2) - (4 * a * c);
