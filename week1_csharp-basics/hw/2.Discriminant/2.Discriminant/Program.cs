@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _2.Discriminant
+namespace Discriminant_and_roots
 {
     class Program
     {
