@@ -6,55 +6,59 @@ namespace _2.Discriminant
     {
         static void Main(string[] args)
         {
-            string string1 = "asd";
-            int a, b, c;
-            bool test = false;
-            int i = 1;
-            while (i > 0)
+            // Задаём переменные
+            string userinput;
+            int a, b, c, result;
+            double x1 = 0;
+            double x2 = 0;
+
+            while (true)
             {
-                while (test == false)
+                // Ввод переменных
+                Console.WriteLine("\nEnter a");
+                userinput = Console.ReadLine();
+                a = int.Parse(userinput);
+                Console.WriteLine("Enter b");
+                userinput = Console.ReadLine();
+                b = int.Parse(userinput);
+                Console.WriteLine("Enter c");
+                userinput = Console.ReadLine();
+                c = int.Parse(userinput);
+
+                //Вычисление дискриминанта
+                var Discriminant = Math.Pow(b, 2) - (4 * a * c);
+
+                //Вычисление корней дискриминанта. 
+                if (Discriminant > 0) // При положительном дискриминанте находим два корня
                 {
-                    Console.WriteLine("Enter a");
-                    string1 = Console.ReadLine();
-                    test = int.TryParse(string1, out a);
-                    if (test == false)
-                    {
-                        Console.WriteLine("Please, enter a number");
-                    }
+                    x1 = -b + Math.Sqrt(Discriminant);
+                    x2 = -b - Math.Sqrt(Discriminant);
+                    result = 1;
                 }
-                Console.WriteLine("OK, a = " + string1);
-                a = int.Parse(string1);
-                test = false;
-                while (test == false)
+                else if (Discriminant == 0) // При дискриминанте равном нулю у нас один корень
                 {
-                    Console.WriteLine("Enter b");
-                    string1 = Console.ReadLine();
-                    test = int.TryParse(string1, out b);
-                    if (test == false)
-                    {
-                        Console.WriteLine("Please, enter a number");
-                    }
+                    x1 = -b / (2 * a);
+                    result = 0;
                 }
-                Console.WriteLine("OK, b = " + string1);
-                test = false;
-                b = int.Parse(string1);
-                while (test == false)
+                else  // При отрицательном дискриминанте корней нет.
                 {
-                    Console.WriteLine("Enter c");
-                    string1 = Console.ReadLine();
-                    test = int.TryParse(string1, out c);
-                    if (test == false)
-                    {
-                        Console.WriteLine("Please, enter a number");
-                    }
+                    result = -1;
                 }
-                Console.WriteLine("OK, c = " + string1);
-                c = int.Parse(string1);
-                var dis = Math.Pow(b, 2) - (4 * a * c);
-                test = false;
-                Console.Clear();
-                Console.WriteLine("If a = " + a + ", b = " + b + " and c = " + c + "\nDiscriminant = " + dis);
-                Console.WriteLine("Another one?");
+
+                //Вывод дискриминанта и корней уравнения.
+
+                if (result == 1)
+                {
+                    Console.WriteLine("D = " + Discriminant + "\nx1 = " + x1 + "\nx2 = " + x2);
+                }
+                else if (result == 0)
+                {
+                    Console.WriteLine("D = " + Discriminant + "\nx = " + x1);
+                }
+                else if (result == -1)
+                {
+                    Console.WriteLine("D = " + Discriminant + "\nNo roots.");
+                }
             }
         }
     }

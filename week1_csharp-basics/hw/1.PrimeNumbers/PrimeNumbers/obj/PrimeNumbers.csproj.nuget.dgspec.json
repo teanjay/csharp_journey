@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tnj\\source\\repos\\csharp_journey\\week1_csharp-basics\\hw\\2.Discriminant\\2.Discriminant\\2.Discriminant.csproj": {}
+    "C:\\Users\\tnj\\source\\repos\\PrimeNumbers\\PrimeNumbers\\PrimeNumbers.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tnj\\source\\repos\\csharp_journey\\week1_csharp-basics\\hw\\2.Discriminant\\2.Discriminant\\2.Discriminant.csproj": {
+    "C:\\Users\\tnj\\source\\repos\\PrimeNumbers\\PrimeNumbers\\PrimeNumbers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tnj\\source\\repos\\csharp_journey\\week1_csharp-basics\\hw\\2.Discriminant\\2.Discriminant\\2.Discriminant.csproj",
-        "projectName": "2.Discriminant",
-        "projectPath": "C:\\Users\\tnj\\source\\repos\\csharp_journey\\week1_csharp-basics\\hw\\2.Discriminant\\2.Discriminant\\2.Discriminant.csproj",
+        "projectUniqueName": "C:\\Users\\tnj\\source\\repos\\PrimeNumbers\\PrimeNumbers\\PrimeNumbers.csproj",
+        "projectName": "PrimeNumbers",
+        "projectPath": "C:\\Users\\tnj\\source\\repos\\PrimeNumbers\\PrimeNumbers\\PrimeNumbers.csproj",
         "packagesPath": "C:\\Users\\tnj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tnj\\source\\repos\\csharp_journey\\week1_csharp-basics\\hw\\2.Discriminant\\2.Discriminant\\obj\\",
+        "outputPath": "C:\\Users\\tnj\\source\\repos\\PrimeNumbers\\PrimeNumbers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
