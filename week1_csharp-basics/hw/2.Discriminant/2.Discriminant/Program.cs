@@ -58,7 +58,7 @@ namespace Discriminant_and_roots
                 else if (result == -1)
                 {
                     Console.WriteLine("D = " + Discriminant + "\nNo roots.");
-                }
+                } 
             }
         }
     }
