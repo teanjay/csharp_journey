@@ -12,7 +12,7 @@ namespace Discriminant_and_roots
             double x1 = 0;
             double x2 = 0;
 
-            while (true)
+            while (true) // бесконечный цикл для многократного использования программы 
             {
                 // Ввод переменных
                 Console.WriteLine("\nEnter a");
