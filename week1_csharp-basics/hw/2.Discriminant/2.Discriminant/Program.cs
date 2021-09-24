@@ -8,16 +8,12 @@ namespace Discriminant_and_roots
         {
 
             string userInput;
-            int a = 0; //todo:beautify
-            int b = 0;
-            int c = 0;
-            double x1 = 0;
-            double x2 = 0;
+            int a = 0, b = 0, c = 0; 
+            double x1 = 0, x2 = 0;
 
             while (true)
             {
                 userInput = Console.ReadLine();
-                Console.WriteLine(userInput);
                 if (!validateUserInput(userInput, ref a, ref b, ref c))
                 {
                     Console.WriteLine("Invalid input, try again");
@@ -39,11 +35,12 @@ namespace Discriminant_and_roots
 
         static bool validateUserInput(string userInput, ref int a, ref int b, ref int c)
         {
-            var userInputArr = userInput.Split(); //todo: catch exception
+            var userInputArr = userInput.Split(); 
             return userInputArr.Length == 3 &&
                 int.TryParse(userInputArr[0], out a) &&
                 int.TryParse(userInputArr[1], out b) &&
-                int.TryParse(userInputArr[2], out c);
+                int.TryParse(userInputArr[2], out c) &&
+                a != 0;
         }
     }
 }
