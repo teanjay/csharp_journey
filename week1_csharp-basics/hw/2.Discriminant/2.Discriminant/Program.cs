@@ -6,60 +6,44 @@ namespace Discriminant_and_roots
     {
         static void Main(string[] args)
         {
-            // Задаём переменные
-            string userinput;
-            int a, b, c, result;
+
+            string userInput;
+            int a = 0; //todo:beautify
+            int b = 0;
+            int c = 0;
             double x1 = 0;
             double x2 = 0;
 
-            while (true) // бесконечный цикл для многократного использования программы 
+            while (true)
             {
-                // Ввод переменных
-                Console.WriteLine("\nEnter a");
-                userinput = Console.ReadLine();
-                a = int.Parse(userinput);
-                Console.WriteLine("Enter b");
-                userinput = Console.ReadLine();
-                b = int.Parse(userinput);
-                Console.WriteLine("Enter c");
-                userinput = Console.ReadLine();
-                c = int.Parse(userinput);
-
-                //Вычисление дискриминанта
-                var Discriminant = Math.Pow(b, 2) - (4 * a * c);
-
-                //Вычисление корней дискриминанта. 
-                if (Discriminant > 0) // При положительном дискриминанте находим два корня
+                userInput = Console.ReadLine();
+                Console.WriteLine(userInput);
+                if (!validateUserInput(userInput, ref a, ref b, ref c))
                 {
-                    x1 = -b + Math.Sqrt(Discriminant);
-                    x2 = -b - Math.Sqrt(Discriminant);
-                    result = 1;
-                }
-                else if (Discriminant == 0) // При дискриминанте равном нулю у нас один корень
-                {
-                    x1 = -b / (2 * a);
-                    result = 0;
-                }
-                else  // При отрицательном дискриминанте корней нет.
-                {
-                    result = -1;
+                    Console.WriteLine("Invalid input, try again");
+                    continue;
                 }
 
-                //Вывод дискриминанта и корней уравнения.
+                var discriminant = Math.Pow(b, 2) - (4 * a * c);
+                if (discriminant < 0)
+                {
+                    Console.WriteLine("Negative discriminant. No roots.");
+                    continue;
+                }
 
-                if (result == 1)
-                {
-                    Console.WriteLine("D = " + Discriminant + "\nx1 = " + x1 + "\nx2 = " + x2);
-                }
-                else if (result == 0)
-                {
-                    Console.WriteLine("D = " + Discriminant + "\nx = " + x1);
-                }
-                else if (result == -1)
-                {
-                    Console.WriteLine("D = " + Discriminant + "\nNo roots.");
-                } 
+                x1 = (-b + Math.Sqrt(discriminant)) / (2 * a);
+                x2 = (-b - Math.Sqrt(discriminant)) / (2 * a);
+                Console.WriteLine("D = " + discriminant + "\nx1 = " + x1 + "\nx2 = " + x2);
             }
+        }
+
+        static bool validateUserInput(string userInput, ref int a, ref int b, ref int c)
+        {
+            var userInputArr = userInput.Split(); //todo: catch exception
+            return userInputArr.Length == 3 &&
+                int.TryParse(userInputArr[0], out a) &&
+                int.TryParse(userInputArr[1], out b) &&
+                int.TryParse(userInputArr[2], out c);
         }
     }
 }
