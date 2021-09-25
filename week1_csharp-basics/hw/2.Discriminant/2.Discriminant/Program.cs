@@ -19,7 +19,13 @@ namespace Discriminant_and_roots
                     Console.WriteLine("Invalid input, try again");
                     continue;
                 }
+                if (a == 0)
+                {
 
+                    x1 = -c/b;
+                    Console.WriteLine("x = " + x1);
+                    continue;
+                }
                 var discriminant = Math.Pow(b, 2) - (4 * a * c);
                 if (discriminant < 0)
                 {
@@ -39,8 +45,7 @@ namespace Discriminant_and_roots
             return userInputArr.Length == 3 &&
                 int.TryParse(userInputArr[0], out a) &&
                 int.TryParse(userInputArr[1], out b) &&
-                int.TryParse(userInputArr[2], out c) &&
-                a != 0;
+                int.TryParse(userInputArr[2], out c);
         }
     }
 }
