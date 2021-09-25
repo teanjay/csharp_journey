@@ -3,24 +3,52 @@
 Задание: реализовать класс MyFloat32
 
 ```
-// число с плавающей запятой, должно быть реализовано согласно стандарту IEEE_754
+/// <summary>
+/// число с плавающей запятой согласно стандарту IEEE_754
+/// </summary>
 public class MyFloat32 
 {
-    // вернуть значение числа в десятичном представлении
+    /// <summary>
+    /// Конструктор класса MyFloat32
+    /// </summary>
+    /// <param name="exponent"> Экспонента в виде строки </param>
+    /// <param name="mantissa"> Мантисса в виде строки </param>
+    /// <param name="sign"> Знак, '+' или '-' </param>
+    public MyFloat32(string exponent, string mantissa, char sign) {
+
+    }
+
+    /// <summary>
+    /// Конвертировать число в десятичное представление и вернуть его значение
+    /// </summary>
+    /// <returns> Значение числа в десятичном представлении </returns>
     public float ToDecimal();
 
-    // следующее float32 число из области значения
+    /// <summary>
+    /// Следующее число с плавающей запятой из области значения
+    /// </summary>
+    /// <returns> Значение следующего числа </returns>
     public MyFloat32 Next();
 
-    // предыдущее float32 число из области значения
+    /// <summary>
+    /// Предыдущее число с плавающей запятой из области значения
+    /// </summary>
+    /// <returns> Значение предыдущего числа </returns>
     public MyFloat32 Prev();
 
-    // операция сложения таких чисел
-    public static MyFloat32 operator +(MyFloat32 a)
-    // операция вычитания таких чисел
-    public static Fraction operator -(Fraction a)
+    /// <summary>
+    /// Операция сложения
+    /// </summary>
+    /// <param name="f"> Второе слагаемое </param>
+    /// <returns> Сумма чисел </returns>
+    public static MyFloat32 operator +(MyFloat32 f)
+    /// <summary>
+    /// Операция вычитания
+    /// </summary>
+    /// <param name="f"> Вычитаемое </param>
+    /// <returns> Разность чисел </returns>
+    public static MyFloat32 operator -(MyFloat32 f)
 }
-
 ```
 
 Полезные ссылки: 
