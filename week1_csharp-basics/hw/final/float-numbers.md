@@ -2,6 +2,7 @@
 
 Задание: реализовать класс MyFloat32
 
+```
 // число с плавающей запятой, должно быть реализовано согласно стандарту IEEE_754
 public class MyFloat32 
 {
@@ -19,6 +20,8 @@ public class MyFloat32
     // операция вычитания таких чисел
     public static Fraction operator -(Fraction a)
 }
+
+```
 
 Полезные ссылки: 
 - https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/built-in-types
