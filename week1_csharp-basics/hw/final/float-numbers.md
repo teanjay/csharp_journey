@@ -14,10 +14,8 @@ public class MyFloat32
     /// <param name="exponent"> Экспонента в виде строки </param>
     /// <param name="mantissa"> Мантисса в виде строки </param>
     /// <param name="sign"> Знак, '+' или '-' </param>
-    public MyFloat32(string exponent, string mantissa, char sign) {
-
-    }
-
+    public MyFloat32(string exponent, string mantissa, char sign)
+    
     /// <summary>
     /// Конвертировать число в десятичное представление и вернуть его значение
     /// </summary>
