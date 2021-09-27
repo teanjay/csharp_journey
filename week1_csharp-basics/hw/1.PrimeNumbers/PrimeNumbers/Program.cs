@@ -9,31 +9,39 @@ namespace PrimeNumbers
 			while (true) 
 			{
 				var userInput = Console.ReadLine();
-				if (!validateUserInput(userInput, out int n)) 
+				if (!tryParseUserInput(userInput, out int n)) 
 				{
 					continue;
 				}
 				calcPrimeNumbers(n);
 			}
 		}
-		static bool calcPrimeNumbers(int n) 
+		static void calcPrimeNumbers(int n) //todo: change name & add method (?) to print
 		{
-			int i = 1;
-			while (i <= n) 
+			for (int i = 2; i <= n; i++)
 			{
-				if (i == 2 || i == 3 || i == 5 || i == 7) 
+				if (i % 2 == 0 || i % 3 == 0 || i % 5 == 0 || i % 7 == 0) 
 				{
-					Console.WriteLine(i);
+					if (i == 2 || i == 3 || i == 5 || i == 7) 
+					{
+						Console.WriteLine(i);
+					}
+					continue;
 				}
-				if (i % 2 != 0 && i % 3 != 0 && i % 5 != 0 && i % 7 != 0) 
+				for (int k = 8; k <= i; k ++) 
 				{
-					Console.WriteLine(i);
+					if (i % k == 0) 
+					{
+						break;
+					}
+					if (k == i-1) 
+					{
+					    Console.WriteLine(i);
+					}
 				}
-				i++;
 			}
-			return true;
-		}
-		static bool validateUserInput(string userInput, out int n) 
+	}
+		static bool tryParseUserInput(string userInput, out int n) 
 		{
 
 			if (!int.TryParse(userInput, out n)) 
