@@ -25,21 +25,21 @@ namespace _4.Factorial
                 result = result * i;
                 i++;
             }
-
             return result;
         }
         static bool validateInput(string userInput, out int a) 
         {
-             if (!int.TryParse(userInput, out a))
+            if (!int.TryParse(userInput, out a))
                 {
                     Console.WriteLine("Invalid input");
-                    if (a < 1)
+                    return false;
+                }
+            if (a < 1)
                     {
                         Console.WriteLine("Negative number");
+                        return false;
                     }
-                 return false;
-                }
-			return true;
+            return true;
         }
     }
 }
