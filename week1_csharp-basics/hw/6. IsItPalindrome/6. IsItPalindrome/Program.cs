@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _6._IsItPalindrome
+namespace IsItPalindrome
 {
     class Program
     {
