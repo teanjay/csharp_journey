@@ -9,14 +9,10 @@ namespace _4.Factorial
             while (true)
             {
                 string userInput = Console.ReadLine();
-                if (!int.TryParse(userInput, out int a))
-                {
-                    Console.WriteLine("Invalid input");
-                    if (a < 1)
-                    {
-                        Console.WriteLine("Negative number");
-                    }
-                }
+                if (!validateInput(userInput, out int a))
+				{
+					continue;
+				}
                 Console.WriteLine(factorial(a, out int result));
             }
         }
@@ -29,8 +25,21 @@ namespace _4.Factorial
                 result = result * i;
                 i++;
             }
-
             return result;
+        }
+        static bool validateInput(string userInput, out int a) 
+        {
+            if (!int.TryParse(userInput, out a))
+                {
+                    Console.WriteLine("Invalid input");
+                    return false;
+                }
+            if (a < 1)
+                    {
+                        Console.WriteLine("Negative number");
+                        return false;
+                    }
+            return true;
         }
     }
 }
