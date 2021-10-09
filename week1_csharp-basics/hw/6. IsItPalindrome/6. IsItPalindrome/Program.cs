@@ -6,25 +6,27 @@ namespace IsItPalindrome
     {
         static void Main(string[] args)
         {
-            var str = "ASDFGHJKLLKJHGFDSA";
-            System.Text.StringBuilder reverse = new System.Text.StringBuilder(str);
-            bool isPalindrom = false;
-            int k = reverse.Length - 1;
-
-            for (int j = 0; j < reverse.Length/2; j++)
+            while (true)
             {
-                if (reverse[j] == reverse[k - j])
+                string userInput = Console.ReadLine();
+                System.Text.StringBuilder reverse = new System.Text.StringBuilder(userInput);
+                bool isPalindrom = false;
+                int k = reverse.Length - 1;
+                for (int j = 0; j < reverse.Length / 2; j++)
                 {
-                    isPalindrom = true;
-                    continue;
+                    if (reverse[j] == reverse[k - j])
+                    {
+                        isPalindrom = true;
+                        continue;
+                    }
+                    else
+                    {
+                        isPalindrom = false;
+                        break;
+                    }
                 }
-                else
-                {
-                    isPalindrom = false;
-                    break;
-                }
+                Console.WriteLine(isPalindrom);
             }
-            Console.WriteLine(isPalindrom);
         }
     }
 }
