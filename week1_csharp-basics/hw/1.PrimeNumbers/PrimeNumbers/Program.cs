@@ -6,15 +6,12 @@ namespace PrimeNumbers
 	{
 		static void Main(string[] args) 
 		{
-			while (true) 
-			{
 				var userInput = Console.ReadLine();
 				if (!tryParseUserInput(userInput, out int n)) 
 				{
 					continue;
 				}
 				calcPrimeNumbers(n);
-			}
 		}
 		static void calcPrimeNumbers(int n) //todo: change name & add method (?) to print
 		{
