@@ -6,27 +6,38 @@ namespace IsItPalindrome
     {
         static void Main(string[] args)
         {
-            while (true)
-            {
                 string userInput = Console.ReadLine();
-                System.Text.StringBuilder reverse = new System.Text.StringBuilder(userInput);
-                bool isPalindrom = false;
-                int k = reverse.Length - 1;
-                for (int j = 0; j < reverse.Length / 2; j++)
+                if (!isPalindrome(userInput))
                 {
-                    if (reverse[j] == reverse[k - j])
-                    {
-                        isPalindrom = true;
-                        continue;
-                    }
-                    else
-                    {
-                        isPalindrom = false;
-                        break;
-                    }
+                    Console.WriteLine("It's not palindrome");
                 }
-                Console.WriteLine(isPalindrom);
+                else
+                {
+                    Console.WriteLine("Yes, it's palindrome");
+                }
+        }
+        static bool isPalindrome(string a)
+        {
+            char[] inputArray = a.ToCharArray();
+            char[] backwardsArray = a.ToCharArray();
+            int l = backwardsArray.Length; // длина всей строки
+            int m = l / 2; // середина строки
+            for (int i = 0; i < m; i++)
+            {
+                var temp = backwardsArray[i];
+                backwardsArray[i] = backwardsArray[l - i - 1];
+                backwardsArray[l - i - 1] = temp;
             }
+
+            for (int f = 0; f < l; f++)
+            {
+                if (inputArray[f] != backwardsArray[f])
+                {
+                    return false;
+
+                }
+            }
+            return true;
         }
     }
 }
