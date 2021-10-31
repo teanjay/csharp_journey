@@ -7,16 +7,12 @@ namespace reverseString
         static void Main(string[] args)
         {
             string userInput = Console.ReadLine();
-            char[] inputArray = userInput.ToCharArray();
-            int l = inputArray.Length; // длина всей строки
-            int m = l / 2; // середина строки
-            for (int i = 0; i < m; i++)
+            char[] reverseArray = new char[userInput.Length];
+            for (int i = userInput.Length; i > 0;  i--)
             {
-                var temp = inputArray[i];
-                inputArray[i] = inputArray[l - i - 1];
-                inputArray[l - i - 1] = temp;
+                reverseArray[userInput.Length-i] = userInput[i-1];
             }
-            Console.WriteLine(inputArray);
+            Console.WriteLine(reverseArray);
         }
     }
 }
