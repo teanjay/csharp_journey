@@ -4,82 +4,92 @@ namespace test_project_oop
 {
     public class Human
     {
-        public int age { get; set; }
-        public string name { get; set; }
-        public string ownPets { get; set; }
+        public int Age { get; set; }
+        public string Name { get; set; }
+        public Cat[] Pets { get; set; }
 
-        public Human(string n, int a, string b) { name = n; age = a; ownPets = b; }
-        public void getInfo()
+        public Human(string name, int age, Cat cat) { Name = name; Age = age; Pets = new Cat[]{ cat }; }
+        public override string ToString()
         {
-            Console.WriteLine($"Имя: {name}, возраст: {age}, Питомцы: {ownPets}");
+            return $"Имя: {Name}, возраст: {Age}, Питомцы: {Pets}";
+        }
+
+        public void FeedPets(string meal)
+        {
+            foreach (var p in Pets) 
+            {
+                p.Eat(meal);
+            }
         }
 
     }
 
     public class Cat
     {
-        public string name { get; set; }
-        public int age { get; set; }
-        public string breed { get; set; }
-        public int satiety { get; set; }
-        public string owner { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public string Breed { get; set; }
+        public int Satiety { get; set; }
+        public string Owner { get; set; }
 
-        public Cat(string nameString, int ageInt, string breedString, string ownerString, int satietyInt) { name = nameString; breed = breedString; age = ageInt; owner = ownerString; satiety = satietyInt; }
-        public void getInfo(string a)
+        public Cat(string name, 
+            int age, 
+            string breed,
+            string owner, 
+            int satiety) 
         {
-            Console.WriteLine($"Имя: {name}, порода: {breed}, возраст: {age} месяцев, хозяин: {owner}. \n Текущий уровень сытости: {satiety} единиц.");
+            this.Name = name;
+            this.Age = age;
+            this.Breed = breed;
+            this.Satiety = satiety;
+            this.Owner = owner;
         }
+
+        public void Eat(string meal)
+        {
+            Console.WriteLine($"{Name} eating {meal}");
+            Satiety++;
+        }
+        //public void getInfo(string a)
+        //{
+        //    Console.WriteLine($"Имя: {name}, порода: {breed}, возраст: {age} месяцев, хозяин: {owner}. \n Текущий уровень сытости: {satiety} единиц.");
+        //}
+        
+
     }
+
 
     class Program
     {
+
+        static void feedPets(string ownerName, string petName, string meal, Human[] people)
+        {
+            foreach (var p in people)
+            {
+                if (ownerName != p.Name)
+                {
+                    continue;
+                }
+                foreach (var pet in p.Pets)
+                {
+                    if (petName == pet.Name)
+                    {
+                        pet.Eat(meal);
+                    }
+                }
+            }
+        }
         static void Main(string[] args)
         {
-            Human K = new Human("Kirill", 23, "Alfie");
-            Human N = new Human("Nastya", 24, "Marty");
-            Human V = new Human("Victor", 29, "Simon");
-            Cat Alfie = new Cat("Alfie", 13, "bengal", "Kirill", 50);
-            Cat Simon = new Cat("Simon", 19, "unknown", "Victor", 90);
-            Cat Marty = new Cat("Marty", 98, "unknown", "Nastya", 25);
-            string[] humans = { "Kirill", "Nastya", "Victor" };
-            string[] pets = { "Alfie", "Marty", "Simon" };
-
-            void feedPets(string owner, string petName, int satietyCount)
+            var people = new Human[]
             {
-                if (owner == Alfie.owner && petName == Alfie.name)
-                {
-                    Alfie.satiety += satietyCount;
-                }
-                else if (owner == Marty.owner && petName == Marty.name)
-                {
-                    Marty.satiety += satietyCount;
-                }
-                else
-                {
-                    Console.WriteLine("Ошибка. Неверный питомец и/или хозяин.");
-                }
-            }
-            while (true)
-            {
-                Console.WriteLine("Напиши своё имя");
-                string owner = Console.ReadLine();
-                Console.WriteLine("Напиши имя питомца");
-                string petName = Console.ReadLine();
-                for (int i = 0; i < humans.Length; i++)
-                {
-                    if (owner == humans[i] && petName == pets[i])
-                    {
-                        Console.WriteLine("OK");
-                        break;
-                    }
-                    if (i+1 == humans.Length)
-                    {
-                        Console.WriteLine("Ошибка. Неверный питомец и/или хозяин.");
-                    }
-                }
-              
-                Console.WriteLine("------------\n");
-            }
+                new Human("Kirill", 23, new Cat("Alfie", 13, "bengal", "Kirill", 50)),
+                new Human("Nastya", 24, new Cat("Simon", 19, "unknown", "Victor", 90)),
+                new Human("Victor", 29, new Cat("Marty", 98, "unknown", "Nastya", 25))
+            };
+            feedPets("Kirill", "Alfie", "stuff", people);
+            var kirill = people[0];
+            kirill.FeedPets("stuff");
         }
     }
 }
