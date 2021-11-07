@@ -1,43 +1,37 @@
 using System;
+using System.Collections;
 
 namespace PrimeNumbers 
 {
-	class Program 
+	public class Program 
 	{
 		static void Main(string[] args) 
 		{
-				var userInput = Console.ReadLine();
-				if (!tryParseUserInput(userInput, out int n)) 
-				{
-					continue;
-				}
-				calcPrimeNumbers(n);
+			primeList(100);
 		}
-		static void calcPrimeNumbers(int n) //todo: change name & add method (?) to print
-		{
-			for (int i = 2; i <= n; i++)
+		public static ArrayList primeList(int a)
+        {
+		ArrayList primeNumbersList = new ArrayList();
+			primeNumbersList.Add(2);
+			for (int i = 3; i < a; i++)
 			{
-				if (i % 2 == 0 || i % 3 == 0 || i % 5 == 0 || i % 7 == 0) 
+				bool isPrime = true;
+				for (int j = 2; j < i; j++)
 				{
-					if (i == 2 || i == 3 || i == 5 || i == 7) 
+					if (i % j == 0)
 					{
-						Console.WriteLine(i);
-					}
-					continue;
-				}
-				for (int k = 8; k <= i; k ++) 
-				{
-					if (i % k == 0) 
-					{
+						isPrime = false;
 						break;
 					}
-					if (k == i-1) 
-					{
-					    Console.WriteLine(i);
-					}
 				}
+				if (isPrime == true)
+				{
+					primeNumbersList.Add(i);
+				}
+
 			}
-	}
+			return primeNumbersList;
+		}
 		static bool tryParseUserInput(string userInput, out int n) 
 		{
 
