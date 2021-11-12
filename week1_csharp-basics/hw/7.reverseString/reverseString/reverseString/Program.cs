@@ -7,12 +7,21 @@ namespace reverseString
         static void Main(string[] args)
         {
             string userInput = Console.ReadLine();
-            char[] reverseArray = new char[userInput.Length];
-            for (int i = userInput.Length; i > 0;  i--)
+            HandmadeReverse(userInput);
+            StringBuilderReverse(userInput);
+        }
+        static void HandmadeReverse(string a)
+        {
+            char[] reverseArray = new char[a.Length];
+            for (int i = a.Length; i > 0; i--)
             {
-                reverseArray[userInput.Length-i] = userInput[i-1];
+                reverseArray[a.Length - i] = a[i - 1];
             }
             Console.WriteLine(reverseArray);
+        }
+        static void StringBuilderReverse(string a)
+        {
+
         }
     }
 }

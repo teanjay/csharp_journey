@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tnj\\source\\repos\\PrimeNumbers\\PrimeNumbers\\PrimeNumbers.csproj",
+      "projectUniqueName": "C:\\Users\\tnj\\source\\repos\\csharp_journey\\week1_csharp-basics\\hw\\1.PrimeNumbers\\PrimeNumbers\\PrimeNumbers.csproj",
       "projectName": "PrimeNumbers",
-      "projectPath": "C:\\Users\\tnj\\source\\repos\\PrimeNumbers\\PrimeNumbers\\PrimeNumbers.csproj",
+      "projectPath": "C:\\Users\\tnj\\source\\repos\\csharp_journey\\week1_csharp-basics\\hw\\1.PrimeNumbers\\PrimeNumbers\\PrimeNumbers.csproj",
       "packagesPath": "C:\\Users\\tnj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tnj\\source\\repos\\PrimeNumbers\\PrimeNumbers\\obj\\",
+      "outputPath": "C:\\Users\\tnj\\source\\repos\\csharp_journey\\week1_csharp-basics\\hw\\1.PrimeNumbers\\PrimeNumbers\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
