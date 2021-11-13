@@ -1,22 +1,18 @@
 ﻿using System;
 
-namespace _4.Factorial
+namespace Factorial
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            while (true)
-            {
                 string userInput = Console.ReadLine();
-                if (!validateInput(userInput, out int a))
+                if (validateInput(userInput, out int a))
 				{
-					continue;
-				}
                 Console.WriteLine(factorial(a, out int result));
-            }
+                }
         }
-        static int factorial(int a, out int result)
+        public static int factorial(int a, out int result)
         {
             int i = 2;
             result = 1;
