@@ -41,6 +41,7 @@ namespace test_project_oop
             Cat Alfie = new Cat("Alfie", 13, "bengal", "Kirill", 50);
             Cat Simon = new Cat("Simon", 19, "unknown", "Victor", 90);
             Cat Marty = new Cat("Marty", 98, "unknown", "Nastya", 25);
+
             string[] humans = { "Kirill", "Nastya", "Victor" };
             string[] pets = { "Alfie", "Marty", "Simon" };
 
@@ -69,7 +70,7 @@ namespace test_project_oop
                 {
                     if (owner == humans[i] && petName == pets[i])
                     {
-                        Console.WriteLine("OK");
+                        Console.WriteLine("OK");        // понять, как здесь по pets[i] вызвать метод feedPets
                         break;
                     }
                     if (i+1 == humans.Length)
