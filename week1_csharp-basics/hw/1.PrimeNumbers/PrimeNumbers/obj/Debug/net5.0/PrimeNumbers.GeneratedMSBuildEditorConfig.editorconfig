@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = PrimeNumbers
-build_property.ProjectDir = C:\Users\tnj\source\repos\csharp_journey\week1_csharp-basics\hw\1.PrimeNumbers\PrimeNumbers\
+build_property.ProjectDir = C:\Repos\csharp_journey\week1_csharp-basics\hw\1.PrimeNumbers\PrimeNumbers\
